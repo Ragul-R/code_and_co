@@ -1,0 +1,418 @@
+
+/*GLOBAL*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+a{
+	text-decoration:none;
+	color: #fff; 
+}
+a span{
+	padding:0 0 5px 0;
+}
+a span:hover{
+	border-bottom: 2px solid #dcdcdc;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.clear::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.active{
+	color: black;
+}
+.btn{
+	background: #2086fb;
+	color: #fff;
+	padding: 12px 30px;
+	text-transform: uppercase;
+	font-size: 15px;
+	border-radius: 22px;
+	outline: none;
+	cursor: pointer;
+	border:none;
+}
+
+/*NAV*/
+nav{ 
+	background: rgba(136, 136, 136, 0.5);
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	padding:4px 0 0 0; 
+}
+.container{
+	margin: auto 40px auto 40px;
+}
+
+nav ul{
+	list-style: none;
+	display: inline-block;
+	padding: 12px 0;
+}
+ 
+nav ul li{
+	float: left;
+	margin:0 0 0 31px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight:bold;
+	font-size: 14px;
+}
+
+nav ul li:first-child{
+	margin: 0;
+}
+
+nav.mob{
+	display:none;
+}
+
+/* HEADER */ 
+header{
+	background: url('../image/backdrop.png') no-repeat top center;
+	background-size: cover;
+	height: 100vh;
+	max-height: 687px;
+}
+.mask{
+	background: rgba(0, 0, 0, 0.6);
+	height: 100%;
+	position: relative;
+}
+.center-text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 100%;
+}
+header h1{
+	color: #fff;
+	font-weight: bold;
+	margin:0 0 20px 0; 
+}
+header input[type="text"]{
+	height: 64px;
+	border-radius: 4px;
+	border:6px solid rgba(136, 136, 136, 0.5);
+	padding:5px 5px 5px 25px;
+	font-size: 16px;
+	color: #9b9b9b;
+	width: 70%;
+	max-width: 936px;
+}
+header input[type="text"]:focus{
+	box-shadow:5px 5px 40px 10px  rgba(0,0,0,1.8);
+	outline: none;
+}
+
+/* SECTION */
+section{
+	padding: 40px;
+	font-size: 16px;
+	line-height: 28px;
+	color: #858585;
+}
+.row:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.row:before,.row:after{
+	content: "";
+}
+.box{
+	text-align: center;
+	width:25%;
+	float: left;
+	border-left: 1px solid #dcdcdc;
+}
+.row:first-child{
+	border-bottom: 1px solid #dcdcdc;
+}
+.box:first-child{
+	border-left: none;
+}
+.box img{
+	margin:52px 0 0 0; 
+}
+.box h3{
+	margin:24px 0 10px 0;
+	color: #4a4a4a;
+	font-size:18px;
+}
+.box p{
+	margin: 10px 48px 60px 48px;
+}
+/* FOOTER */
+footer{
+	text-align: center;
+	font-size: 16px;
+	color: white;
+	background:#323232;
+	padding:64px 0 0 0;  
+}
+footer h2{
+	font-size: 30px;
+	margin-bottom:3px;  
+}
+footer button{
+	margin:48px 0 69px 0;
+}
+.copyright{
+	text-align: left;
+	padding: 25px 40px;
+	background:#252525;
+	font-size: 14px;
+	position: relative; 
+}
+.copyright button{
+	position: absolute;
+	bottom: 50px;
+	right: 44px;
+	background: #4a4a4a;
+	color: #979797;
+	padding: 10px;
+	border:none;
+	margin: 0;
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+
+
+/* TABLET */
+@media screen and (max-width: 950px) and (min-width: 601px){
+	nav{
+		display: none;
+	}
+	nav.mob{
+		display: block;
+		position: fixed;
+		text-align: center;
+		z-index: 1;
+		font-size: 10px;
+	}
+	nav img{
+		margin-left:-40px; 
+	}
+	nav.mob ul{
+		position: absolute;
+		top: 100%;
+		left:0%;
+		display: none;
+		background: rgba(136, 136, 136, 0.5);
+		width: 100%; 
+	}
+	nav.mob ul li{
+		float: none;
+		margin: 0;
+		padding:5px; 
+	}
+	.btn{
+		padding: 10px 20px;
+		font-size: 11px;
+	}
+	.toggle{
+		display: none;
+	}
+	.toggle-label{
+		float: left;
+		cursor: pointer;
+	}
+	.toggle:checked ~ ul{
+		display: block;
+	}
+	.toggle-label span{
+		padding: 10px;
+	}
+	.fa-bars{
+		color: #fff;
+		font-size: 30px;
+	}
+	.clear:after{
+		clear: none;
+	}
+	.box{
+		width: 50%;
+		border-bottom: 1px solid #dcdcdc;
+	}
+	.row:first-child{
+		border-bottom:none; 
+	}
+	.box:nth-child(3){
+		border-left: none;
+	}
+	.row:last-child .box:nth-child(3),.row:last-child  .box:nth-child(4){
+		border-bottom: none;
+	}
+	.box img{
+	margin:32px 0 0 0; 
+	}
+	.box h3{
+		margin:16px 0 14px 0;
+	}
+	.box p{
+		margin: 5px 24px 30px 24px;
+	}
+	header h1{
+		font-size: 25px;
+	}
+	footer h2{
+		font-size: 18px;
+	}
+	section{
+		line-height: 18px;
+	}
+	section h3{
+		font-size:14px;
+	}
+	section p{
+		font-size: 12px;
+	}
+	header input[type="text"]{
+		height: 54px;
+		border-radius: 4px;
+		border:4px solid rgba(136, 136, 136, 0.5);
+		padding: 5px 5px 5px 25px;
+		font-size: 14px;
+		color: #9b9b9b;
+		width: 80%;
+	}
+	footer p{
+		font-size: 14px;
+	}
+	.copyright button{		
+		bottom: 50px;
+	}
+
+}
+
+
+
+
+
+/* MOBILE DEVICE */
+@media screen and (max-width: 600px){
+	p{
+		font-size: 12px;
+	}
+	nav{
+		display: none;
+	}
+	nav.mob{
+		display: block;
+		position: fixed;
+		text-align: center;
+		z-index: 1;
+		font-size: 11px;
+	}
+	nav img{
+		margin-left:-40px; 
+	}
+	nav.mob ul{
+		position: absolute;
+		top: 100%;
+		left:0%;
+		display: none;
+		background: rgba(136, 136, 136, 0.5);
+		width: 100%; 
+	}
+	nav.mob ul li{
+		float: none;
+		margin: 0;
+		padding:5px; 
+	}
+	.btn{
+		padding: 10px 20px;
+		font-size: 11px;
+	}
+	.toggle{
+		display: none;
+	}
+	.toggle-label{
+		float: left;
+		cursor: pointer;
+	}
+	.toggle:checked ~ ul{
+		display: block;
+	}
+	.toggle-label span{
+		padding: 10px;
+	}
+	.fa-bars{
+		color: #fff;
+		font-size: 30px;
+	}
+	.clear:after{
+		clear: none;
+	}
+
+	header input[type="text"]{
+		width: 90%;
+		height: 54px;
+		border-radius: 4px;
+		border:3px solid rgba(136, 136, 136, 0.5);
+		padding: 5px 5px 5px 20px;
+		font-size: 11px;
+		color: #9b9b9b;
+	}
+	header h1{
+		font-size: 24px;
+	}
+
+	section{
+		line-height: 18px;
+	}
+	section h3{
+		font-size: 16px;
+	}
+	.row:after,.row:before{
+		clear: none;
+	}
+	.box{
+		float: none;
+		width: 100%;
+		border-left: none;
+		border-bottom: 1px solid #dcdcdc;
+	}
+	.row:last-child .box:last-child{
+		border-bottom: none;
+	}
+	.box img{
+	margin:22px 0 0 0; 
+	}
+	.box h3{
+		margin:22px 0 8px 0;
+	}
+	.box p{
+		margin: 5px 14px 15px 14px;
+	}
+	footer h2{
+		font-size: 20px;
+	}
+	.copyright button{
+		bottom: 50px;
+	}
+	
+
+}
